@@ -34,7 +34,11 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section className="cs_gray_bg_1 position-relative" id="team">
+    <section
+      className="cs_gray_bg_1 position-relative"
+      id="team"
+      style={{ padding: "10px" }}
+    >
       <div className="cs_height_120 cs_height_lg_80"></div>
       <div className="container">
         {/* Section Heading */}

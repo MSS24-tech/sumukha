@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // Import images
 import heroBg from "../assets/image/hero_bg_1.jpg";
@@ -50,6 +50,33 @@ const mobileSocialLinks = [
 ];
 
 function Hero() {
+  // const phrases = [
+  //   "Dreams That Break Rules",
+  //   "Thoughts That Spark Fire",
+  //   "Visions That Won’t Quit",
+  //   "Ideas That Bite Back",
+  // ];
+
+  // const [currentIndex, setCurrentIndex] = useState(0);
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+  //   }, 4000);
+  //   return () => clearInterval(interval);
+  // }, []);
+  const staticText = "Share Your Ideas With ";
+  const word = "Sumukha";
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActive(true); // trigger animation
+      setTimeout(() => setActive(false), 1000); // reset for next cycle
+    }, 3000); // repeat every 3 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section
       className="cs_hero cs_style_1 cs_bg_filled position-relative"
@@ -98,10 +125,31 @@ function Hero() {
             <p className="cs_hero_subtitle cs_accent_color cs_semibold">
               Best Of Your Growth, Our Mission
             </p>
-            <h1 className="cs_hero_title cs_extra_bold wow fadeInDown">
-              Share your ideas with{" "}
-              <span className="cs_accent_color cs_semibold">Sumukha Tech.</span>
-            </h1>
+            {/* <h1 className="cs_hero_title cs_extra_bold fade-text">
+              {(() => {
+                const words = phrases[currentIndex].split(" ");
+                const lastWord = words.pop(); // get last word
+                return (
+                  <>
+                    {words.join(" ")}{" "}
+                    <span style={{ color: "orange" }}>{lastWord}</span>
+                  </>
+                );
+              })()}
+            </h1> */}
+
+            <h6 className="cs_hero_title cs_extra_bold typewriter">
+              {staticText}
+              {Array.from(word).map((letter, index) => (
+                <span
+                  key={index}
+                  className={active ? "active" : ""}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  {letter}
+                </span>
+              ))}
+            </h6>
 
             <div className="cs_hero_text_wrapper">
               <p className="cs_hero_text cs_medium wow fadeInRight">

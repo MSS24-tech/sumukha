@@ -54,8 +54,10 @@ export default function WorkProcess() {
   return (
     <>
       {/* Work Process Section */}
-      <section className="cs_process_area cs_style_1">
-        <div className="cs_height_120 cs_height_lg_80"></div>
+      <section
+        className="cs_process_area cs_style_1"
+        style={{ padding: "80px 0" }}
+      >
         <div className="container">
           {/* Section Heading */}
           <div className="cs_section_heading cs_style_1 text-center">
@@ -75,14 +77,13 @@ export default function WorkProcess() {
               Provider. We are a leading digital agency.
             </p>
           </div>
-
-          <div className="cs_height_60 cs_height_lg_50"></div>
+          <br />
 
           {/* Process Content */}
-          <div className="cs_process_content">
-            <div className="cs_heading_box cs_radius_20">
+          <div className="cs_process_content mt-12">
+            <div className="cs_heading_box cs_radius_20 mb-10">
               <div className="cs_heading_box_inner cs_center cs_blue_bg cs_bold cs_white_color cs_radius_10 text-center text-uppercase">
-                Digitom Approach
+                Sumukha Approach
               </div>
             </div>
 
@@ -127,7 +128,7 @@ export default function WorkProcess() {
         </div>
       </section>
 
-      {/* Clients / Brands Slider */}
+      {/* Clients / Brands Slider (still commented) */}
       {/* <div className="cs_brands_slider position-relative z-2">
         <div className="container">
           <div className="cs_section_heading cs_style_1 cs_type_2">
@@ -138,7 +139,6 @@ export default function WorkProcess() {
 
           <div className="cs_horizontal_slider_wrapper cs_brands_wrapper">
             <div className="cs_horizontal_slider_in">
-              Duplicate brand lists for slider looping
               {[...Array(2)].map((_, listIndex) => (
                 <div key={listIndex} className="cs_brands_list cs_type_1">
                   {brands.map((brand, idx) => (

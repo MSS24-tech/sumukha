@@ -38,7 +38,10 @@ const iconBoxes = [
 
 const HowWeDo = () => {
   return (
-    <section className="position-relative overflow-hidden">
+    <section
+      className="position-relative overflow-hidden"
+      style={{ padding: "10px" }}
+    >
       <div className="cs_height_120 cs_height_lg_80"></div>
       <div className="container">
         {/* Section Heading */}

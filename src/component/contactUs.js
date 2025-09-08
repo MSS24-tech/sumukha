@@ -55,7 +55,11 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="position-relative overflow-hidden" id="contact">
+    <section
+      className="position-relative overflow-hidden"
+      id="contact"
+      style={{ padding: "10px" }}
+    >
       <div className="cs_height_120 cs_height_lg_80"></div>
       <div className="container position-relative">
         <div className="row cs_gap_y_40">

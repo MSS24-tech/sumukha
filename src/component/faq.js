@@ -23,10 +23,11 @@ const FaqItem = ({ item, isOpen, onClick }) => {
   const answerRef = useRef(null);
 
   return (
-    <div className="faq-item" style={{ marginTop: "5%" }}>
+    <div className="faq-item">
       <button
         className={`faq-question ${isOpen ? "active" : ""}`}
         onClick={onClick}
+        aria-expanded={isOpen}
       >
         {item.question}
       </button>
@@ -34,7 +35,10 @@ const FaqItem = ({ item, isOpen, onClick }) => {
         ref={answerRef}
         className="faq-answer"
         style={{
-          maxHeight: isOpen ? `${answerRef.current.scrollHeight}px` : "0px",
+          maxHeight:
+            isOpen && answerRef.current
+              ? `${answerRef.current.scrollHeight}px`
+              : "0px",
         }}
       >
         <p>{item.answer}</p>
@@ -51,7 +55,7 @@ const Faq = () => {
   };
 
   return (
-    <section className="section" id="faq">
+    <section className="section" id="faq" style={{ padding: "10px" }}>
       <div className="container">
         <h2 className="section-title">Frequently Asked Questions</h2>
         <p className="section-sub">

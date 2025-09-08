@@ -20,7 +20,7 @@ const punchlines = [
 
 const LatestWork = () => {
   return (
-    <section>
+    <section style={{ padding: "10px" }}>
       <div className="cs_height_120 cs_height_lg_80"></div>
       <div className="container">
         <div className="cs_section_heading cs_style_1 text-center">

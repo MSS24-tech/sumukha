@@ -1,11 +1,53 @@
-import React from "react";
-import FooterLogo from "../assets/image/footer_logo.svg";
+import React, { useState, useEffect } from "react";
 import FooterIcon from "../assets/image/footer_img_icon6477.png";
 import ArrowIcon from "../assets/image/icons/arrow_right_2.svg";
 import FooterShape from "../assets/image/footer_shape_1.svg";
 import FooterBg from "../assets/image/footer_bg_1.jpg";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const Footer = () => {
+export default function Footer() {
+  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    try {
+      const res = await fetch("send_email.php", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
+      setStatus(data.status);
+      setMessage(data.message);
+      if (data.status === "success") form.reset();
+      setTimeout(() => {
+        setMessage("");
+        setStatus("");
+      }, 5000);
+    } catch (error) {
+      setStatus("error");
+      setMessage("An error occurred. Please try again.");
+      setTimeout(() => {
+        setMessage("");
+        setStatus("");
+      }, 5000);
+    }
+  };
+
+  useEffect(() => {
+    if (message) {
+      if (status === "success") {
+        toast.success(message, { position: "bottom-right" });
+      } else {
+        toast.error(message, { position: "bottom-right" });
+      }
+    }
+  }, [message, status]);
+
   return (
     <footer
       className="cs_footer cs_style_1 cs_bg_filed cs_heading_bg position-relative"
@@ -13,62 +55,35 @@ const Footer = () => {
         backgroundImage: `url(${FooterBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        padding: "10px",
       }}
     >
       {/* Footer Top */}
-      <div
-        className="cs_footer_top position-relative z-1"
-        style={{ marginTop: "42%" }}
-      >
+      <div className="cs_footer_top position-relative z-1">
         <div className="container-fluid">
           <div className="cs_footer_content">
-            <div className="cs_footer_top_content">
-              <div className="wow fadeInLeft">Let's talk!</div>
-              <a
-                className="cs_footer_top_img cs_radius_50 wow zoomIn"
-                href="contact.html"
-              >
-                <img
-                  src={FooterIcon}
-                  alt="Footer Icon"
-                  width={128}
-                  height={128}
-                  style={{ display: "block", borderRadius: "50%" }}
-                />
-                <span className="cs_center">
-                  <img
-                    src={ArrowIcon}
-                    alt="Arrow Icon"
-                    width={54}
-                    height={56}
-                  />
-                </span>
-              </a>
+            <div className="cs_footer_top_content text-center">
+              <div className="wow fadeInLeft cs_fs_36 cs_white_color cs_mb-30">
+                Let's talk!
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Main Footer */}
-      <div className="cs_main_footer cs_white_color_2 position-relative z-1">
+      <div
+        className="cs_main_footer cs_white_color_2 position-relative z-1"
+        style={{ paddingTop: 0, marginTop: "30px" }}
+      >
         <div className="container-fluid">
           <div className="cs_footer_content cs_footer_row">
             {/* Footer Widget 1 */}
             <div className="cs_footer_widget cs_footer_text">
-              <div className="cs_text_widget">
-                {/* <img
-                  src={FooterLogo}
-                  alt="Logo"
-                  width={212}
-                  height={38}
-                  className="cs_mb_30 wow zoomIn"
-                  style={{ display: "block" }}
-                /> */}
-                <p className="cs_mb_37">
-                  Phasellus ultricies aliquam volutpat ullamcorper laoreet
-                  neque, a lacinia curabitur lacinia mollis
-                </p>
-              </div>
+              <p className="cs_mb_37">
+                Phasellus ultricies aliquam volutpat ullamcorper laoreet neque,
+                a lacinia curabitur lacinia mollis
+              </p>
               <div className="cs_social_btns cs_style_1">
                 {[
                   {
@@ -114,7 +129,17 @@ const Footer = () => {
                     { name: "Contact Us", link: "#contact" },
                   ].map((item) => (
                     <li key={item.name}>
-                      <a href={item.link} aria-label={`Page link ${item.name}`}>
+                      <a
+                        href={item.link}
+                        aria-label={`Page link ${item.name}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const target = document.querySelector(item.link);
+                          if (target) {
+                            target.scrollIntoView({ behavior: "smooth" });
+                          }
+                        }}
+                      >
                         {item.name}
                       </a>
                     </li>
@@ -157,13 +182,21 @@ const Footer = () => {
                 </p>
                 <div className="cs_footer_newsletter cs_style_1">
                   <form
-                    className="cs_footer_newsletter_form cs_radius_8"
-                    action="#"
+                    className="cs_footer_newsletter_form cs_radius_8 d-flex"
+                    onSubmit={handleSubmit}
                   >
-                    <input type="email" placeholder="Enter Email Address" />
+                    <input
+                      type="email"
+                      placeholder="Enter Email Address"
+                      name="newsletter_email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
                     <button
                       aria-label="Subscribe button"
                       className="cs_btn cs_style_1 cs_center"
+                      type="submit"
                     >
                       <span>
                         <i className="bi bi-send"></i>
@@ -180,7 +213,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="cs_footer_bottom cs_white_color_2 position-relative z-1">
         <div className="container-fluid">
-          <div className="cs_footer_bottom_in cs_footer_content">
+          <div className="cs_footer_bottom_in cs_footer_content d-flex justify-content-between align-items-center flex-wrap">
             <div className="cs_footer_copyright">
               © All Copyright 2025 by{" "}
               <a href="#" aria-label="Site link">
@@ -188,7 +221,7 @@ const Footer = () => {
               </a>
             </div>
             <div>
-              <ul className="cs_footer_menu cs_mp_0">
+              <ul className="cs_footer_menu cs_mp_0 d-flex gap-3">
                 <li>
                   <a href="#" aria-label="Footer link">
                     Terms &amp; Conditions
@@ -212,8 +245,8 @@ const Footer = () => {
       <div className="cs_footer_shape_2 position-absolute">
         <img src={FooterShape} alt="Shape" width={148} height={556} />
       </div>
+
+      <ToastContainer position="bottom-right" autoClose={5000} />
     </footer>
   );
-};
-
-export default Footer;
+}

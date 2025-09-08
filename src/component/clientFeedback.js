@@ -71,7 +71,10 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <section className="cs_testimonial_slider cs_slider_gap_30 position-relative">
+    <section
+      className="cs_testimonial_slider cs_slider_gap_30 position-relative"
+      style={{ padding: "10px" }}
+    >
       <div className="container">
         <div className="cs_section_heading cs_style_1 cs_type_1">
           <p className="cs_section_subtitle cs_fs-18 cs_semibold cs_accent_color cs_mb_20">

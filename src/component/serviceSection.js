@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import arrowRight from "../assets/image/icons/arrow_right.svg";
 import serviceBg from "../assets/image/service_item_bg5eba.jpg";
 
@@ -40,12 +40,34 @@ const ServicesSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+  const scrollYRef = useRef(0);
 
   // Combine main + extra services for modal
   const popupServices = [...services, ...extraServices];
 
+  useEffect(() => {
+    if (isModalOpen) {
+      scrollYRef.current = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollYRef.current}px`;
+      document.body.style.width = "100%";
+    } else {
+      const scrollY = scrollYRef.current;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo({ top: scrollY, left: 0, behavior: "instant" });
+    }
+
+    return () => {
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+    };
+  }, [isModalOpen]);
+
   return (
-    <section className="cs_heading_bg" id="service">
+    <section className="cs_heading_bg" id="service" style={{ padding: "10px" }}>
       <div className="cs_height_120 cs_height_lg_80"></div>
       <div className="container">
         {/* Heading */}
