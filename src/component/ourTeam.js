@@ -1,13 +1,13 @@
 import React from "react";
 
 // Import team images
-import team1 from "../assets/image/team_10b892.jpg";
-import team2 from "../assets/image/team_3d62a.jpg";
-import team3 from "../assets/image/team_5a32a.jpg";
-import team4 from "../assets/image/team_6d8ad.jpg";
+import team1 from "../assets/image/team_10b892.webp";
+import team2 from "../assets/image/team_3d62a.webp";
+import team3 from "../assets/image/team_5a32a.webp";
+import team4 from "../assets/image/team_6d8ad.webp";
 
 // Import shapes
-import teamShape1 from "../assets/image/team_shape_1.svg";
+import teamShape1 from "../assets/image/team_shape_1.webp";
 
 const teamMembers = [
   {

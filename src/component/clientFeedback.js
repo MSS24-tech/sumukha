@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 
 // Import testimonial avatars
-// import avatar1 from "../assets/image/avatar_5d7ed.jpg";
-// import avatar2 from "../assets/image/avatar_25209.jpg";
-// import avatar3 from "../assets/image/avatar_36ebb.jpg";
-// import avatar4 from "../assets/image/avatar_45c6b.jpg";
+// import avatar1 from "../assets/image/avatar_5d7ed.webp";
+// import avatar2 from "../assets/image/avatar_25209.webp";
+// import avatar3 from "../assets/image/avatar_36ebb.webp";
+// import avatar4 from "../assets/image/avatar_45c6b.webp";
 
 // Import icons
-import quoteIcon from "../assets/image/icons/quote_1.svg";
-import glowShape from "../assets/image/color_glow.svg";
+import quoteIcon from "../assets/image/icons/quote_1.webp";
+import glowShape from "../assets/image/color_glow.webp";
 
 // Testimonial data
 // const testimonials = [

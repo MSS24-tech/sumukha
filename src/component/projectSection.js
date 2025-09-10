@@ -1,12 +1,12 @@
 import React from "react";
-import card1 from "../assets/image/card_1.jpg";
-import card2 from "../assets/image/card_2.jpg";
-import card3 from "../assets/image/card_3.jpg";
-import card4 from "../assets/image/card_4.jpg";
-import card5 from "../assets/image/card_5.jpg";
-import card6 from "../assets/image/card_6.jpg";
-import arrowRight from "../assets/image/icons/arrow_right.svg";
-import checkmark from "../assets/image/icons/checkmark.svg";
+import card1 from "../assets/image/card_1.webp";
+import card2 from "../assets/image/card_2.webp";
+import card3 from "../assets/image/card_3.webp";
+import card4 from "../assets/image/card_4.webp";
+import card5 from "../assets/image/card_5.webp";
+import card6 from "../assets/image/card_6.webp";
+import arrowRight from "../assets/image/icons/arrow_right.webp";
+import checkmark from "../assets/image/icons/checkmark.webp";
 
 const projects = [card1, card2, card3, card4, card5, card6];
 

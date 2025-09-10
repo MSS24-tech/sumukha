@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import arrowRight from "../assets/image/icons/arrow_right.svg";
-import serviceBg from "../assets/image/service_item_bg5eba.jpg";
+import arrowRight from "../assets/image/icons/arrow_right.webp";
+import serviceBg from "../assets/image/service_item_bg5eba.webp";
 
 const services = [
   {

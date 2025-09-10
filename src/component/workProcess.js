@@ -1,20 +1,20 @@
 import React from "react";
 
 // Import step images
-import step1Img from "../assets/image/step_index_1.svg";
-import step2Img from "../assets/image/step_index_2.svg";
-import step3Img from "../assets/image/step_index_3.svg";
-import step4Img from "../assets/image/step_index_4.svg";
+import step1Img from "../assets/image/step_index_1.webp";
+import step2Img from "../assets/image/step_index_2.webp";
+import step3Img from "../assets/image/step_index_3.webp";
+import step4Img from "../assets/image/step_index_4.webp";
 
 // Import background shape images
-import processShape1 from "../assets/image/process_shape_1.svg";
+import processShape1 from "../assets/image/process_shape_1.webp";
 
 // Import brand images
-// import brand1 from "../assets/image/brand_1.svg";
-// import brand2 from "../assets/image/brand_2.svg";
-// import brand3 from "../assets/image/brand_3.svg";
-// import brand4 from "../assets/image/brand_4.svg";
-// import brand5 from "../assets/image/brand_5.svg";
+// import brand1 from "../assets/image/brand_1.webp";
+// import brand2 from "../assets/image/brand_2.webp";
+// import brand3 from "../assets/image/brand_3.webp";
+// import brand4 from "../assets/image/brand_4.webp";
+// import brand5 from "../assets/image/brand_5.webp";
 
 // Work process steps data
 const steps = [

@@ -15,7 +15,7 @@ import ContactSection from "./component/contactUs";
 import BlogSection from "./component/blogSection";
 import BlogUpload from "./component/blogupload";
 import Footer from "./component/footer";
-import LoadImage from "./assets/image/green modern photography price list instagram post (1).jpg";
+import LoadImage from "./assets/image/popupImage.webp";
 
 function App() {
   const [showPopup, setShowPopup] = useState(false);
@@ -118,14 +118,12 @@ function App() {
           }
         />
 
-        {/* Blog Upload route */}
+        {/* Blog Upload route WITHOUT header, footer, or popup */}
         <Route
           path="/blog-upload"
           element={
             <div className="App">
-              <Header />
               <BlogUpload />
-              <Footer />
             </div>
           }
         />

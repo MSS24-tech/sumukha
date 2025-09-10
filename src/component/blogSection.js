@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import arrowIcon from "../assets/image/icons/arrow_right.svg";
+import arrowIcon from "../assets/image/icons/arrow_right.webp";
 import "../assets/style.css";
 import Faq from "./faq";
 

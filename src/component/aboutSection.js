@@ -1,14 +1,14 @@
 import React from "react";
 
 // Importing assets
-import starIcon from "../assets/image/icons/star.svg";
-import vectorLine from "../assets/image/vector_line.svg";
-import aboutShape1 from "../assets/image/about_shape_1.svg";
-import blobShape from "../assets/image/blob_shape.svg";
-import circle1 from "../assets/image/circle_1.svg";
-import aboutImg1 from "../assets/image/about_img_10078.jpg";
-import aboutImg2 from "../assets/image/about_img_232aa.jpg";
-import clientGroup from "../assets/image/client_group_16b31.png";
+import starIcon from "../assets/image/icons/star.webp";
+import vectorLine from "../assets/image/vector_line.webp";
+import aboutShape1 from "../assets/image/about_shape_1.webp";
+import blobShape from "../assets/image/blob_shape.webp";
+import circle1 from "../assets/image/circle_1.webp";
+import aboutImg1 from "../assets/image/about_img_10078.webp";
+import aboutImg2 from "../assets/image/about_img_232aa.webp";
+import clientGroup from "../assets/image/client_group_16b31.webp";
 
 function About() {
   return (

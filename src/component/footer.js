@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import FooterIcon from "../assets/image/footer_img_icon6477.png";
-import ArrowIcon from "../assets/image/icons/arrow_right_2.svg";
-import FooterShape from "../assets/image/footer_shape_1.svg";
-import FooterBg from "../assets/image/footer_bg_1.jpg";
+import FooterIcon from "../assets/image/footer_img_icon6477.webp";
+import ArrowIcon from "../assets/image/icons/arrow_right_2.webp";
+import FooterShape from "../assets/image/footer_shape_1.webp";
+import FooterBg from "../assets/image/footer_bg_1.webp";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

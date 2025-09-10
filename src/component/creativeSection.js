@@ -1,22 +1,22 @@
 import React from "react";
 
 // import icons & images
-import dollarIcon from "../assets/image/icons/dollar_currency.svg";
-import starIcon from "../assets/image/star_2cdf8.png";
-import shieldIcon from "../assets/image/shield_check7cf0.png";
-import commentIcon from "../assets/image/icons/comment.svg";
-import likeIcon from "../assets/image/icons/like.svg";
-import wheelShape from "../assets/image/wheel_1.svg";
-import favicon2 from "../assets/image/favicon_2.svg";
-import working1 from "../assets/image/working_img_1407e.jpg";
-import working2 from "../assets/image/working_img_26832.jpg";
+import dollarIcon from "../assets/image/icons/dollar_currency.webp";
+import starIcon from "../assets/image/star_2cdf8.webp";
+import shieldIcon from "../assets/image/shield_check7cf0.webp";
+import commentIcon from "../assets/image/icons/comment.webp";
+import likeIcon from "../assets/image/icons/like.webp";
+import wheelShape from "../assets/image/wheel_1.webp";
+import favicon2 from "../assets/image/favicon_2.webp";
+import working1 from "../assets/image/working_img_1407e.webp";
+import working2 from "../assets/image/working_img_26832.webp";
 
 // Background decorative shapes
-import missionShape1 from "../assets/image/mission_shape_1.svg";
-import missionShape2 from "../assets/image/mission_shape_2.svg";
-import spiral1 from "../assets/image/spiral_1.svg";
-import waves from "../assets/image/waves.svg";
-import rings from "../assets/image/rings.svg";
+import missionShape1 from "../assets/image/mission_shape_1.webp";
+import missionShape2 from "../assets/image/mission_shape_2.webp";
+import spiral1 from "../assets/image/spiral_1.webp";
+import waves from "../assets/image/waves.webp";
+import rings from "../assets/image/rings.webp";
 
 const iconBoxes = [
   {

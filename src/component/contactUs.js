@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 // Import images
-import contactImg from "../assets/image/contact_img_24201.jpg";
-import contactShape1 from "../assets/image/contact_shape_1.svg";
-import starShape from "../assets/image/star_shape_1.svg";
-import circleShape from "../assets/image/circle_1.svg";
+import contactImg from "../assets/image/contact_img_24201.webp";
+import contactShape1 from "../assets/image/contact_shape_1.webp";
+import starShape from "../assets/image/star_shape_1.webp";
+import circleShape from "../assets/image/circle_1.webp";
 
 export default function ContactSection() {
   const [message, setMessage] = useState("");

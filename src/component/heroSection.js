@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 
 // Import images
-import heroBg from "../assets/image/hero_bg_1.jpg";
-import heroImg from "../assets/image/hero-img-68d83.jpg";
-import starShape from "../assets/image/star_shape.svg";
-import circularText from "../assets/image/circular_text.svg";
-import arrowRight from "../assets/image/icons/arrow_right.svg";
-// import growthBalance from "../assets/image/icons/growth_balance.svg";
-// import playerIcon from "../assets/image/icons/player_1.svg";
-import userIcon from "../assets/image/icons/user_1.svg";
-import facebook from "../assets/image/letter-f_9182827.png";
-import instagram from "../assets/image/instagram-logo_4103007.png";
-import linkedIn from "../assets/image/linkedin_3670045.png";
-import x from "../assets/image/twitter.png";
+import heroBg from "../assets/image/hero_bg_1.webp";
+import heroImg from "../assets/image/hero-img-68d83.webp";
+import starShape from "../assets/image/star_shape.webp";
+import circularText from "../assets/image/circular_text.webp";
+import arrowRight from "../assets/image/icons/arrow_right.webp";
+// import growthBalance from "../assets/image/icons/growth_balance.webp";
+// import playerIcon from "../assets/image/icons/player_1.webp";
+import userIcon from "../assets/image/icons/user_1.webp";
+import facebook from "../assets/image/letter-f_9182827.webp";
+import instagram from "../assets/image/instagram-logo_4103007.webp";
+import linkedIn from "../assets/image/linkedin_3670045.webp";
+import x from "../assets/image/twitter.webp";
 import "../assets/style.css";
 
 const socialLinks = [
