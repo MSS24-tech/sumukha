@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import logo from "../assets/image/logo.jpg";
+import logo from "../assets/image/logo.svg";
+import "../assets/style.css";
 
 const menuItems = [
   { title: "Home", href: "#home" },
@@ -38,11 +39,9 @@ function Header() {
                 <img
                   alt="Logo"
                   loading="lazy"
-                  width="212"
-                  height="38"
                   decoding="async"
-                  style={{ color: "transparent" }}
                   src={logo}
+                  className="logo"
                 />
               </a>
             </div>

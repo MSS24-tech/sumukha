@@ -10,11 +10,11 @@ import step4Img from "../assets/image/step_index_4.svg";
 import processShape1 from "../assets/image/process_shape_1.svg";
 
 // Import brand images
-import brand1 from "../assets/image/brand_1.svg";
-import brand2 from "../assets/image/brand_2.svg";
-import brand3 from "../assets/image/brand_3.svg";
-import brand4 from "../assets/image/brand_4.svg";
-import brand5 from "../assets/image/brand_5.svg";
+// import brand1 from "../assets/image/brand_1.svg";
+// import brand2 from "../assets/image/brand_2.svg";
+// import brand3 from "../assets/image/brand_3.svg";
+// import brand4 from "../assets/image/brand_4.svg";
+// import brand5 from "../assets/image/brand_5.svg";
 
 // Work process steps data
 const steps = [
@@ -48,7 +48,7 @@ const steps = [
 const processShapes = Array(7).fill(processShape1);
 
 // Brand images array
-const brands = [brand1, brand2, brand3, brand4, brand5];
+// const brands = [brand1, brand2, brand3, brand4, brand5];
 
 export default function WorkProcess() {
   return (

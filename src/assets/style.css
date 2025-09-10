@@ -1,3 +1,22 @@
+.logo {
+  width: 300px; /* desktop size */
+  height: 80px; /* keep aspect ratio */
+}
+
+@media (max-width: 768px) {
+  /* tablets & smaller */
+  .logo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* mobile */
+  .logo {
+    width: 200px;
+  }
+}
+
 .cs_social_links_mobile {
   display: flex; /* horizontal line */
   gap: 15px; /* space between icons */

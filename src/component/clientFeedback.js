@@ -1,62 +1,62 @@
 import React, { useState, useEffect } from "react";
 
 // Import testimonial avatars
-import avatar1 from "../assets/image/avatar_5d7ed.jpg";
-import avatar2 from "../assets/image/avatar_25209.jpg";
-import avatar3 from "../assets/image/avatar_36ebb.jpg";
-import avatar4 from "../assets/image/avatar_45c6b.jpg";
+// import avatar1 from "../assets/image/avatar_5d7ed.jpg";
+// import avatar2 from "../assets/image/avatar_25209.jpg";
+// import avatar3 from "../assets/image/avatar_36ebb.jpg";
+// import avatar4 from "../assets/image/avatar_45c6b.jpg";
 
 // Import icons
 import quoteIcon from "../assets/image/icons/quote_1.svg";
 import glowShape from "../assets/image/color_glow.svg";
 
 // Testimonial data
-const testimonials = [
-  {
-    name: "Brooklyn Simmons",
-    company: "Acme Co.",
-    quote:
-      "This team exceeded my expectations! They were punctual and meticulous. My office has looked better. Will use them again!",
-    rating: 4.5,
-    avatar: avatar4,
-  },
-  {
-    name: "Cody Fisher",
-    company: "Barone LLC.",
-    quote:
-      "Excellent service and attention to detail. Our projects have never run smoother. Highly recommend!",
-    rating: 5,
-    avatar: avatar2,
-  },
-  {
-    name: "Leslie Alexander",
-    company: "Biffco Ltd.",
-    quote:
-      "The team was incredibly efficient and professional. They finished ahead of schedule and the results were fantastic.",
-    rating: 4,
-    avatar: avatar3,
-  },
-  {
-    name: "Wade Warren",
-    company: "Binford Ltd.",
-    quote:
-      "A pleasure to work with from start to finish. They truly understand their craft and delivered exactly what we needed.",
-    rating: 5,
-    avatar: avatar4,
-  },
-];
+// const testimonials = [
+//   {
+//     name: "Brooklyn Simmons",
+//     company: "Acme Co.",
+//     quote:
+//       "This team exceeded my expectations! They were punctual and meticulous. My office has looked better. Will use them again!",
+//     rating: 4.5,
+//     avatar: avatar4,
+//   },
+//   {
+//     name: "Cody Fisher",
+//     company: "Barone LLC.",
+//     quote:
+//       "Excellent service and attention to detail. Our projects have never run smoother. Highly recommend!",
+//     rating: 5,
+//     avatar: avatar2,
+//   },
+//   {
+//     name: "Leslie Alexander",
+//     company: "Biffco Ltd.",
+//     quote:
+//       "The team was incredibly efficient and professional. They finished ahead of schedule and the results were fantastic.",
+//     rating: 4,
+//     avatar: avatar3,
+//   },
+//   {
+//     name: "Wade Warren",
+//     company: "Binford Ltd.",
+//     quote:
+//       "A pleasure to work with from start to finish. They truly understand their craft and delivered exactly what we needed.",
+//     rating: 5,
+//     avatar: avatar4,
+//   },
+// ];
 
 const TestimonialSlider = () => {
   const [current, setCurrent] = useState(0);
-  const length = testimonials.length;
+  // const length = testimonials.length;
 
   // Auto-slide every 5 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [length]);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setCurrent((prev) => (prev + 1) % length);
+  //   }, 5000);
+  //   return () => clearInterval(timer);
+  // }, [length]);
 
   const renderRating = (rating) => {
     const percentage = (rating / 5) * 100;
@@ -84,7 +84,7 @@ const TestimonialSlider = () => {
         </div>
 
         <div className="cs_testimonial_slider_inner">
-          {testimonials.map((testimonial, index) => (
+          {/* {testimonials.map((testimonial, index) => (
             <div
               key={index}
               className={`cs_testimonial cs_style_1 ${
@@ -112,7 +112,7 @@ const TestimonialSlider = () => {
                 </span>
               </div>
             </div>
-          ))}
+          ))} */}
         </div>
 
         <div className="cs_testimonial_shape_1 position-absolute">
